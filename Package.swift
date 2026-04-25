@@ -1,32 +1,13 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 5.5
 import PackageDescription
 
 let package = Package(
     name: "Test",
     platforms: [
-        .iOS(.v18)
+        .iOS(.v16)
     ],
     products: [
-        .iOSApplication(
-            name: "Test",
-            targets: ["Test"],
-            bundleIdentifier: "com.example.test",
-            teamIdentifier: "",
-            displayVersion: "1.0",
-            bundleVersion: "1",
-            appIcon: .placeholder(icon: .blue),
-            accentColor: .presetColor(.blue),
-            supportedDeviceFamilies: [
-                .pad,
-                .phone
-            ],
-            supportedInterfaceOrientations: [
-                .portrait,
-                .landscapeRight,
-                .landscapeLeft,
-                .portraitUpsideDown
-            ]
-        )
+        .executable(name: "Test", targets: ["Test"])
     ],
     targets: [
         .executableTarget(
